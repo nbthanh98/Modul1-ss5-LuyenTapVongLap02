@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ham khai bao mang ki tu vaf kich thuoc cua mang
+        let strArray1 = [];
+        function strArray(doDai){
+            let dem = 0 ;
+            for( let i = 0; i< doDai; i++){
+                let str = prompt("Nhap vao Mang: ");
+                strArray1[i] = str;
+                dem ++;
+            }
+            document.write("Mang Da Nhap vao: " + strArray1);
+            document.write("<br>");
+            document.write("so luong ki tu trong mang: "+dem);
+        }
+
+        let chieuDaiMang = parseInt(prompt("nhao vao do dai cua mang: "));
+        strArray(chieuDaiMang);
+    
+    </script>
+</body>
+</html>

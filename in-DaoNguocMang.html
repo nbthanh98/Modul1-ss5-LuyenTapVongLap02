@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhap vao Mang:</p>
+    <input type="text" name="" id="input">
+    <button type="button" onclick="addToArray()">addToArray</button>
+    <button type="button" onclick="daoNguocMang()">daoNguocMang</button>
+    <p id="result"></p>
+
+
+    <script>
+        let arrayStr = [];
+        // function add to array
+        function addToArray(){
+            let str = document.getElementById("input").value;
+            arrayStr[arrayStr.length] = str;
+            document.getElementById("input").value = "";
+            console.log(arrayStr);
+        }
+        
+
+        // ham de dao nguoc cac phan tu trong mang
+
+        function daoNguocMang(){
+            
+            for( let i = 0; i< arrayStr.length /2; i++){
+                let temp = arrayStr[i];
+                arrayStr[i] = arrayStr[arrayStr.length- i -1];
+                arrayStr[arrayStr.length- i -1] = temp;
+            }
+            document.getElementById("result").innerHTML = arrayStr;
+        }
+    </script>
+
+</body>
+</html>

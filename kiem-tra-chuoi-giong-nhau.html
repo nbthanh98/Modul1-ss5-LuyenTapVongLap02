@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p >Nhap chuoi 1: </p>
+    <input type="text" id="str1">
+    <p>Nhap chuoi 2:</p>
+    <input type="text" id="str2">
+    <button type="button" onclick = "checkStr()">check</button>
+    <p>Ket qua: <span id="result"></span></p>
+    <script>
+
+        function checkStr(){
+            let str1 = document.getElementById("str1").value;
+            let str2 = document.getElementById("str2").value;
+            //console.log(str1.length);
+            //console.log(str1[1]);
+            
+            if( str1.length != str2.length){
+                document.getElementById('result').innerHTML = "khong giong nhau";
+            }else{
+                let dem = 0;
+                for( let i = 0, j = 0 ; i< str1.length || j< str2.length; j++, i++){
+                    if(str1[i] == str2[j]){
+                        dem++;
+                    }
+                // console.log(i);
+                }
+                if(dem == str1.length){
+                    document.getElementById('result').innerHTML = "giong nhau";
+                }else{
+                    document.getElementById('result').innerHTML = "khong giong nhau";
+                }
+
+            }
+        }
+    
+    </script>
+</body>
+</html>

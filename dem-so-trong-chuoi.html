@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" onkeypress="uniCharCode(event)" onkeydown="uniKeyCode(event)"> 
+        <p id="demo2"></p>
+    <script>
+        function uniCharCode(event) {
+          var char = event.which || event.keyCode;
+          document.getElementById("demo").innerHTML = "Unicode CHARACTER code: " + char;
+        }
+        
+        function uniKeyCode(event) {
+          var key = event.keyCode;
+          document.getElementById("demo2").innerHTML = "Unicode KEY code: " + key;
+        }
+    </script>
+</body>
+</html>

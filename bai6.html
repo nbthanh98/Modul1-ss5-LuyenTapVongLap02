@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input-value">
+    <button type="button" onclick="change()">change</button>
+    <script>
+        function change(){
+            let str = document.getElementById("input-value").value;
+            console.log(str);
+            for( let i = 0; i< str.length; i++){
+               if(str[i] === '-'){
+                   console.log('vao if');
+                   str[i] == 'b';
+               }
+            }
+            document.write(str);
+        }
+
+    </script>
+</body>
+</html>
